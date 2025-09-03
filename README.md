@@ -38,7 +38,7 @@ This capstone project automates testing for the SauceDemo e-commerce application
 - **Maven**  
 - **Selenium WebDriver** 
 - **Cucumber** 
-- **JUnit** s
+- **JUnit** 
 - **Page Object Model** 
 - **ChromeDriver**
 
