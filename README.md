@@ -7,6 +7,31 @@ This capstone project automates testing for the SauceDemo e-commerce application
 
 **Website:** https://www.saucedemo.com/
 
+# Project Files
+
+## 1. SauceDemo Defect Report
+[View SauceDemo Defect Report.xlsx](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/Defects/SauceDemo_Defect_Report.xlsx)
+
+---
+
+## 2. Test Cases - Automation
+[View Test Cases - Automation.xlsx](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/Test%20Cases/Test%20Cases%20-%20Automation.xlsx)
+
+---
+
+## 3. Test Cases - Manual
+[View Test Cases - Manual.xlsx](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/Test%20Cases/Test%20Cases%20-%20Manual.xlsx)
+
+---
+
+## 4. Test Plan SauceDemo
+[View Test Plan SauceDemo.xlsx](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/Test%20Plan/Test%20Plan%20SauceDemo.xlsx)
+
+---
+
+## 5. HTML Report PDF
+[View HTML Report PDF](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/html-report-pdf.pdf)
+
 ## Technologies Used
 
 - **Java** 
