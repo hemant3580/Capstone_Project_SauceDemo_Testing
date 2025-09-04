@@ -37,6 +37,8 @@ This capstone project automates testing for the SauceDemo e-commerce application
 ## 6. Jira List of tasks 
 [View list PDF](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/Jira%20-%20Sauce%20Demo.pdf)
 
+---
+
 ## Technologies Used
 
 - **Java** 
