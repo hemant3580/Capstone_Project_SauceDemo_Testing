@@ -67,4 +67,9 @@ public class CartSteps {
         int actualCount = cartPage.getCartItemCount();
         Assert.assertEquals(actualCount, expectedCount, "Cart item count mismatch");
     }
+    @Then("I should be on checkout page")
+    public void iShouldBeOnCheckoutPage() {
+        String currentUrl = Common.driver.getCurrentUrl();
+        Assert.assertTrue(currentUrl.contains("checkout-step-one"), "Should be on checkout page. Current URL: " + currentUrl);
+}
 }

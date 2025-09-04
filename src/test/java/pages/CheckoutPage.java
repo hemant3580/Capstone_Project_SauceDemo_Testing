@@ -128,13 +128,17 @@ public class CheckoutPage {
  }
 
  public boolean hasShippingInformation() {
-     try {
-         By shippingInfo = By.className("summary_info");
-         return driver.findElement(shippingInfo).getText().contains("FREE PONY EXPRESS DELIVERY");
-     } catch (Exception e) {
-         return false;
-     }
- }
+	    try {
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("checkout_summary_container")));
+	        WebElement shippingDiv = driver.findElement(By.xpath("//*[@id='checkout_summary_container']/div/div[2]/div[4]"));
+	        String shippingText = shippingDiv.getText().toUpperCase().trim();
+	        System.out.println("Shipping Info Text: " + shippingText); 
+	        return shippingText.contains("FREE PONY EXPRESS DELIVERY");
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
 
  public boolean hasTotalCalculation() {
      try {

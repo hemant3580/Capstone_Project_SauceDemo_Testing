@@ -69,5 +69,6 @@ public class InventorySteps {
         inventoryPage = new InventoryPage(Common.driver);
         String actualCount = inventoryPage.getCartBadgeCount();
         Assert.assertEquals(actualCount, expectedCount, "Cart badge count mismatch");
+        
     }
 }

@@ -34,7 +34,11 @@ public class LoginSteps {
         loginPage.enterUsername("standard_user");
         loginPage.enterPassword("secret_sauce");
         loginPage.clickLogin();
-    }
+        
+        InventoryPage inventoryPage = new InventoryPage(Common.driver);
+        Assert.assertTrue(inventoryPage.isInventoryPageLoaded(), "Inventory page did not load after login");
+  
+   }
     
     @When("I login with locked out user")
     public void iLoginWithLockedOutUser() {

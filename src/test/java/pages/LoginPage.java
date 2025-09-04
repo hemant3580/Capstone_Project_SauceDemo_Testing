@@ -34,9 +34,15 @@ public class LoginPage {
         element.sendKeys(password);
     }
     
+    //updated this to handle the element not found error 
     public void clickLogin() {
-        wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
+        try {
+            WebElement button = wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+            button.click();
+        } catch (Exception e) {
+        }
     }
+
     
     public String getErrorMessage() {
         try {

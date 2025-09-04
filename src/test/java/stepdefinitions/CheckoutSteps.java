@@ -24,8 +24,7 @@ public class CheckoutSteps {
     public void iShouldSeeCheckoutErrorMessage(String expectedError) {
         checkoutPage = new CheckoutPage(Common.driver);
         String actualError = checkoutPage.getErrorMessage();
-        Assert.assertTrue(actualError.contains(expectedError), 
-            "Expected error message not found. Actual: " + actualError);
+        Assert.assertTrue(actualError.contains(expectedError), "Expected error message not found. Actual: " + actualError);
     }
     
     @When("I cancel checkout")
@@ -37,8 +36,7 @@ public class CheckoutSteps {
     @Then("I should see order summary with item details")
     public void iShouldSeeOrderSummaryWithItemDetails() {
         checkoutPage = new CheckoutPage(Common.driver);
-        Assert.assertFalse(checkoutPage.getSummaryItemNames().isEmpty(), 
-            "Order summary should contain items");
+        Assert.assertFalse(checkoutPage.getSummaryItemNames().isEmpty(),"Order summary should contain items");
     }
     
     @When("I finish the order")
@@ -51,8 +49,7 @@ public class CheckoutSteps {
     public void iShouldSeeOrderCompletionMessage(String expectedMessage) {
         checkoutPage = new CheckoutPage(Common.driver);
         String actualMessage = checkoutPage.getCompleteHeader();
-        Assert.assertTrue(actualMessage.contains(expectedMessage), 
-            "Expected completion message not found. Actual: " + actualMessage);
+        Assert.assertTrue(actualMessage.contains(expectedMessage), "Expected completion message not found. Actual: " + actualMessage);
     }
     
     @Then("order should be completed successfully")
