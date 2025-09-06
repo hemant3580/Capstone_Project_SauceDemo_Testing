@@ -1,0 +1,480 @@
+Started by user Hemant Manohar Bhase
+Running as SYSTEM
+Building in workspace C:\Users\bhase\.jenkins\workspace\SauceDemo Test Runner
+[SauceDemo Test Runner] $ cmd /c call C:\Users\bhase\AppData\Local\Temp\jenkins17239060577190816134.bat
+
+C:\Users\bhase\.jenkins\workspace\SauceDemo Test Runner>cd C:\Users\bhase\Desktop\CBDD 
+
+C:\Users\bhase\Desktop\CBDD>mvn clean test -Dtest=runners.TestRunner 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< Cucumber_BDD:Cucumber_BDD >----------------------
+[INFO] Building Cucumber_BDD 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ Cucumber_BDD ---
+[INFO] Deleting C:\Users\bhase\Desktop\CBDD\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Cucumber_BDD ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Cucumber_BDD ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Cucumber_BDD ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ Cucumber_BDD ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 14 source files with javac [debug target 1.8] to target\test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 8
+[WARNING] source value 8 is obsolete and will be removed in a future release
+[WARNING] target value 8 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.0.0-M9:test (default-test) @ Cucumber_BDD ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running runners.TestRunner
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+
+Scenario: Add product to cart and verify                          # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/cart.feature:12
+Sep 06, 2025 10:34:24 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:34:26 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:34:26 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I add product "sauce-labs-backpack" to cart              # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? Then cart badge should show "1"                               # stepdefinitions.InventorySteps.cartBadgeShouldShow(java.lang.String)
+  ? When I click on cart icon                                     # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? Then I should be on cart page                                 # stepdefinitions.CartSteps.iShouldBeOnCartPage()
+  ? And I should see product "Sauce Labs Backpack" in cart        # stepdefinitions.CartSteps.iShouldSeeProductInCart(java.lang.String)
+Sep 06, 2025 10:34:33 AM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+
+Scenario: Remove product from cart                                # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/cart.feature:19
+Sep 06, 2025 10:34:34 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:34:35 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:34:35 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I add product "sauce-labs-backpack" to cart              # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                      # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I remove product "sauce-labs-backpack" from cart          # stepdefinitions.CartSteps.iRemoveProductFromCart(java.lang.String)
+  ? Then cart should be empty                                     # stepdefinitions.CartSteps.cartShouldBeEmpty()
+
+Scenario: Remove all products from cart                           # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/cart.feature:25
+Sep 06, 2025 10:34:52 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:34:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:34:54 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I add product "sauce-labs-backpack" to cart              # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I add product "sauce-labs-bike-light" to cart             # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                      # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I remove all products from cart                           # stepdefinitions.CartSteps.iRemoveAllProductsFromCart()
+  ? Then cart should be empty                                     # stepdefinitions.CartSteps.cartShouldBeEmpty()
+
+Scenario: Continue shopping                                       # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/cart.feature:32
+Sep 06, 2025 10:35:12 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:35:13 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:35:13 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I add product "sauce-labs-backpack" to cart              # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                      # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I click continue shopping                                 # stepdefinitions.CartSteps.iClickContinueShopping()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+
+Scenario: Checkout button navigation                              # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/cart.feature:38
+Sep 06, 2025 10:35:20 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:35:21 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:35:21 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I add product "sauce-labs-backpack" to cart              # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                      # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I click checkout                                          # stepdefinitions.CartSteps.iClickCheckout()
+  ? Then I should be on checkout page                             # stepdefinitions.CartSteps.iShouldBeOnCheckoutPage()
+
+Scenario: Checkout with valid information                                                                   # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/checkout.feature:14
+Sep 06, 2025 10:35:28 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:35:29 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:35:29 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                                                                  # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                                                                     # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears                                           # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? And I add product "sauce-labs-backpack" to cart                                                         # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                                                                # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I click checkout                                                                                    # stepdefinitions.CartSteps.iClickCheckout()
+  ? When I enter checkout information with first name "Hemant", last name "Bhase", and postal code "411020" # stepdefinitions.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  ? Then I should see order summary with item details                                                       # stepdefinitions.CheckoutSteps.iShouldSeeOrderSummaryWithItemDetails()
+  ? When I finish the order                                                                                 # stepdefinitions.CheckoutSteps.iFinishTheOrder()
+  ? Then I should see order completion message "Thank you for your order"                                   # stepdefinitions.CheckoutSteps.iShouldSeeOrderCompletionMessage(java.lang.String)
+  ? And order should be completed successfully                                                              # stepdefinitions.CheckoutSteps.orderShouldBeCompletedSuccessfully()
+
+Scenario: Checkout with blank fields                                  # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/checkout.feature:21
+Sep 06, 2025 10:35:36 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:35:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:35:38 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                            # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                               # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears     # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? And I add product "sauce-labs-backpack" to cart                   # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                          # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I click checkout                                              # stepdefinitions.CartSteps.iClickCheckout()
+  ? When I leave checkout information blank and continue              # stepdefinitions.CheckoutSteps.iLeaveCheckoutInformationBlankAndContinue()
+  ? Then I should see checkout error message "First Name is required" # stepdefinitions.CheckoutSteps.iShouldSeeCheckoutErrorMessage(java.lang.String)
+
+Scenario: Cancel checkout                                         # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/checkout.feature:25
+Sep 06, 2025 10:35:45 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:35:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:35:46 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? And I add product "sauce-labs-backpack" to cart               # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                      # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I click checkout                                          # stepdefinitions.CartSteps.iClickCheckout()
+  ? When I cancel checkout                                        # stepdefinitions.CheckoutSteps.iCancelCheckout()
+  ? Then I should be on cart page                                 # stepdefinitions.CartSteps.iShouldBeOnCartPage()
+
+Scenario: Payment, Shipping & Itemized Summary                                                              # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/checkout.feature:29
+Sep 06, 2025 10:35:53 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:35:55 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:35:55 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                                                                  # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                                                                     # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears                                           # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? And I add product "sauce-labs-backpack" to cart                                                         # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                                                                # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I click checkout                                                                                    # stepdefinitions.CartSteps.iClickCheckout()
+  ? When I enter checkout information with first name "Hemant", last name "Bhase", and postal code "411020" # stepdefinitions.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  ? Then I should see order summary with item details                                                       # stepdefinitions.CheckoutSteps.iShouldSeeOrderSummaryWithItemDetails()
+  ? And I should see itemized product list                                                                  # stepdefinitions.CheckoutSteps.iShouldSeeItemizedProductList()
+  ? And I should see payment information                                                                    # stepdefinitions.CheckoutSteps.iShouldSeePaymentInformation()
+Shipping Info Text: FREE PONY EXPRESS DELIVERY!
+  ? And I should see shipping information                                                                   # stepdefinitions.CheckoutSteps.iShouldSeeShippingInformation()
+  ? And I should see total amount calculation                                                               # stepdefinitions.CheckoutSteps.iShouldSeeTotalAmountCalculation()
+
+Scenario: Checkout Completion Message                                                                       # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/checkout.feature:37
+Sep 06, 2025 10:36:01 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:03 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                                                                  # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                                                                     # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears                                           # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? And I add product "sauce-labs-backpack" to cart                                                         # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on cart icon                                                                                # stepdefinitions.CartSteps.iClickOnCartIcon()
+  ? And I click checkout                                                                                    # stepdefinitions.CartSteps.iClickCheckout()
+  ? When I enter checkout information with first name "Hemant", last name "Bhase", and postal code "411020" # stepdefinitions.CheckoutSteps.iEnterCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)
+  ? And I finish the order                                                                                  # stepdefinitions.CheckoutSteps.iFinishTheOrder()
+  ? Then I should see order completion message "Thank you for your order"                                   # stepdefinitions.CheckoutSteps.iShouldSeeOrderCompletionMessage(java.lang.String)
+  ? And I should see checkout complete text "Your order has been dispatched"                                # stepdefinitions.CheckoutSteps.iShouldSeeCheckoutCompleteText(java.lang.String)
+  ? And I should see back to products button                                                                # stepdefinitions.CheckoutSteps.iShouldSeeBackToProductsButton()
+
+Scenario: Login as standard user and dismiss Chrome popup         # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/common-login.feature:3
+Sep 06, 2025 10:36:10 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:12 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:12 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I enter valid username and password                      # stepdefinitions.CommonSteps.iEnterValidUsernameAndPassword()
+  ? And I click the login button                                  # stepdefinitions.CommonSteps.iClickTheLoginButton()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+
+Scenario: Product tile display                                    # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/inventory.feature:12
+Sep 06, 2025 10:36:18 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:19 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:19 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? Then I should see product "Sauce Labs Backpack" displayed     # stepdefinitions.InventorySteps.iShouldSeeProductDisplayed(java.lang.String)
+
+Scenario: Sort by name A-Z                                        # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/inventory.feature:15
+Sep 06, 2025 10:36:26 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:27 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:27 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I sort products by "Name (A to Z)"                       # stepdefinitions.InventorySteps.iSortProductsBy(java.lang.String)
+  ? Then products should be sorted alphabetically A-Z             # stepdefinitions.InventorySteps.productsShouldBeSortedAlphabeticallyAZ()
+
+Scenario: Sort by name Z-A                                        # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/inventory.feature:19
+Sep 06, 2025 10:36:34 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:35 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:35 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I sort products by "Name (Z to A)"                       # stepdefinitions.InventorySteps.iSortProductsBy(java.lang.String)
+  ? Then products should be sorted alphabetically Z-A             # stepdefinitions.InventorySteps.productsShouldBeSortedAlphabeticallyZA()
+
+Scenario: Sort by price low to high                               # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/inventory.feature:23
+Sep 06, 2025 10:36:42 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:43 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:43 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I sort products by "Price (low to high)"                 # stepdefinitions.InventorySteps.iSortProductsBy(java.lang.String)
+  ? Then products should be sorted by price low to high           # stepdefinitions.InventorySteps.productsShouldBeSortedByPriceLowToHigh()
+
+Scenario: Sort by price high to low                               # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/inventory.feature:27
+Sep 06, 2025 10:36:50 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:51 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I sort products by "Price (high to low)"                 # stepdefinitions.InventorySteps.iSortProductsBy(java.lang.String)
+  ? Then products should be sorted by price high to low           # stepdefinitions.InventorySteps.productsShouldBeSortedByPriceHighToLow()
+
+Scenario: Login with valid credentials                                # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/login.feature:9
+Sep 06, 2025 10:36:58 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:36:59 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:36:59 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                            # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I enter username "standard_user" and password "secret_sauce" # stepdefinitions.LoginSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  ? And I click the login button                                      # stepdefinitions.CommonSteps.iClickTheLoginButton()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears     # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page                 # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+
+Scenario: Login with invalid password                                    # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/login.feature:15
+Sep 06, 2025 10:37:16 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:17 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:17 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                               # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I enter username "standard_user" and password "wrong_password"  # stepdefinitions.LoginSteps.iEnterUsernameAndPassword(java.lang.String,java.lang.String)
+  ? Then I should see error message "Username and password do not match" # stepdefinitions.LoginSteps.iShouldSeeErrorMessage(java.lang.String)
+
+Scenario: Login with locked out user                                       # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/login.feature:19
+Sep 06, 2025 10:37:18 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:19 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:19 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                                 # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with locked out user                                      # stepdefinitions.LoginSteps.iLoginWithLockedOutUser()
+  ? Then I should see error message "Sorry, this user has been locked out" # stepdefinitions.LoginSteps.iShouldSeeErrorMessage(java.lang.String)
+
+Scenario: Login with blank username                        # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/login.feature:23
+Sep 06, 2025 10:37:20 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:22 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:22 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                 # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I leave username blank and enter password         # stepdefinitions.LoginSteps.iLeaveUsernameBlankAndEnterPassword()
+  ? Then I should see error message "Username is required" # stepdefinitions.LoginSteps.iShouldSeeErrorMessage(java.lang.String)
+
+Scenario: Login with blank password                        # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/login.feature:27
+Sep 06, 2025 10:37:23 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:24 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:24 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                 # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I enter username and leave password blank         # stepdefinitions.LoginSteps.iEnterUsernameAndLeavePasswordBlank()
+  ? Then I should see error message "Password is required" # stepdefinitions.LoginSteps.iShouldSeeErrorMessage(java.lang.String)
+
+Scenario: All Items menu navigation                               # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/menu.feature:12
+Sep 06, 2025 10:37:25 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:26 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:26 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I click on menu button                                   # stepdefinitions.MenuSteps.iClickOnMenuButton()
+  ? And I click on All Items from menu                            # stepdefinitions.MenuSteps.iClickOnAllItemsFromMenu()
+  ? Then I should remain on inventory page                        # stepdefinitions.MenuSteps.iShouldRemainOnInventoryPage()
+
+Scenario: About menu navigation                                   # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/menu.feature:17
+Sep 06, 2025 10:37:33 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:35 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:35 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I click on menu button                                   # stepdefinitions.MenuSteps.iClickOnMenuButton()
+  ? And I click on About from menu                                # stepdefinitions.MenuSteps.iClickOnAboutFromMenu()
+  ? Then I should be redirected to Sauce Labs website             # stepdefinitions.MenuSteps.iShouldBeRedirectedToSauceLabsWebsite()
+
+Scenario: Logout functionality                                    # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/menu.feature:22
+Sep 06, 2025 10:37:45 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:46 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I click on menu button                                   # stepdefinitions.MenuSteps.iClickOnMenuButton()
+  ? And I click on Logout from menu                               # stepdefinitions.MenuSteps.iClickOnLogoutFromMenu()
+  ? Then I should be redirected to login page                     # stepdefinitions.MenuSteps.iShouldBeRedirectedToLoginPage()
+
+Scenario: Reset app state                                         # file:///C:/Users/bhase/Desktop/CBDD/src/test/resources/features/menu.feature:27
+Sep 06, 2025 10:37:52 AM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Sep 06, 2025 10:37:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 140
+Sep 06, 2025 10:37:54 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ? Given I am on the SauceDemo login page                        # stepdefinitions.CommonSteps.iAmOnLoginPage()
+  ? When I login with valid credentials                           # stepdefinitions.LoginSteps.iLoginWithValidCredentials()
+No alert popup appeared.
+  ? And I dismiss the Chrome password manager popup if it appears # stepdefinitions.CommonSteps.iDismissChromePasswordPopupIfItAppears()
+  ? Then I should be redirected to the inventory page             # stepdefinitions.CommonSteps.iShouldBeRedirectedToTheInventoryPage()
+  ? When I add product "sauce-labs-backpack" to cart              # stepdefinitions.InventorySteps.iAddProductToCart(java.lang.String)
+  ? And I click on menu button                                    # stepdefinitions.MenuSteps.iClickOnMenuButton()
+  ? And I click on Reset App State from menu                      # stepdefinitions.MenuSteps.iClickOnResetAppStateFromMenu()
+  ? Then cart should be reset to empty                            # stepdefinitions.MenuSteps.cartShouldBeResetToEmpty()
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 229.59 s - in runners.TestRunner
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:55 min
+[INFO] Finished at: 2025-09-06T10:38:12+05:30
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
