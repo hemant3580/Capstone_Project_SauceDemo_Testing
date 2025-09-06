@@ -1,5 +1,5 @@
 # Capstone_Project_SauceDemo_Testing
-A test automation project for SauceDemo website using Selenium WebDriver, Cucumber BDD, and Page Object Model design pattern.
+A test automation project for SauceDemo website using Selenium WebDriver, Cucumber BDD, and Page Object Model design pattern and JUnit.
 
 ## Project Overview
 
