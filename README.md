@@ -1,5 +1,5 @@
 # Capstone_Project_SauceDemo_Testing
-A test automation project for SauceDemo website using Selenium WebDriver, Cucumber BDD, and Page Object Model design pattern.
+A test automation project for SauceDemo website using Selenium WebDriver, Cucumber BDD, and Page Object Model design pattern and JUnit.
 
 ## Project Overview
 
@@ -40,7 +40,12 @@ This capstone project automates testing for the SauceDemo e-commerce application
 ---
 
 ## 7. Jenkin Console
-[View list PDF](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/Jenkin/Jenkin_console_output.txt)
+[View console output](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/Jenkin/Jenkin_console_output.txt)
+
+---
+
+## 8. Test Analysis Report
+[View test analysis report](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/SauceDemo%20test%20Analysis%20Report.xlsx)
 
 ---
 ## Technologies Used
@@ -219,4 +224,4 @@ This project includes **24 test scenarios** covering:
 - Navigation menu testing scenarios
 - Menu functionality and logout test cases
 
-## Test Reports
+
