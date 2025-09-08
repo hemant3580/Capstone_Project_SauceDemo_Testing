@@ -48,6 +48,11 @@ This capstone project automates testing for the SauceDemo e-commerce application
 [View test analysis report](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/SauceDemo%20test%20Analysis%20Report.xlsx)
 
 ---
+
+## 9. SauceDemo PPT
+[View PPT pdf ](https://github.com/hemant3580/Capstone_Project_SauceDemo_Testing/blob/main/PPT/SauceDemo%20Automation.pdf)
+
+---
 ## Technologies Used
 
 - **Java** 
